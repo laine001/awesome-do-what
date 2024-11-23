@@ -1,0 +1,9 @@
+{
+  "miniprogramRoot": "./",
+  "projectname": "awesome-do-what",
+  "appid": "testAppId",
+  "setting": {
+    "es6": false,
+    "minified": false
+  }
+}
