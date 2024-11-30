@@ -1,0 +1,25 @@
+.emoji-page {
+  padding: 20px;
+}
+.emoji-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  .img {
+    // width: 120px;
+    // height: 120px;
+    width: 100%;
+    max-height: 210px;
+    border: 1px solid #eee;
+  }
+}
+.emoji-source-selector {
+  position: fixed;
+  bottom: 180px;
+  left: 20px;
+  right: 20px;
+  background-color: #eee;
+  opacity: 0.88;
+  padding: 16px 16px;
+  border-radius: 10px;
+}
