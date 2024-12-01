@@ -22,4 +22,11 @@
   opacity: 0.88;
   padding: 16px 16px;
   border-radius: 10px;
+
+  .picker {
+    display: flex;
+    .picker-title {
+      color: #555;
+    }
+  }
 }

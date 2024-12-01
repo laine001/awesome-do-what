@@ -28,12 +28,12 @@ export default () => {
       // iconPath: '../images/tabbar_cate.png',
       text: "记体重",
     },
-    // {
-    //   pagePath: "/pages/emoji/index",
-    //   selectedIconPath: "../images/tabbar_cate_on.png",
-    //   // iconPath: '../images/tabbar_cate.png',
-    //   text: "纪念日",
-    // },
+    {
+      pagePath: "/pages/barrage/index",
+      // selectedIconPath: "../images/tabbar_cate_on.png",
+      // iconPath: '../images/tabbar_cate.png',
+      text: "手持弹幕",
+    },
   ];
   const nav2page = (item) => {
     Taro.navigateTo({

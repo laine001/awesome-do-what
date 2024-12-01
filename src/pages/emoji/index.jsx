@@ -22,12 +22,12 @@ const getEmojiList = (cdnType = "netlify") => {
   });
 };
 
-const pickerList = [emojiPath.map((el) => el.source), ["jsdelivr", "netlify"]];
+const pickerList = [emojiPath.map((el) => el.source), ["netlify", "jsdelivr"]];
 console.log(pickerList, "pickerList");
 
 export default () => {
   const [sourceIndex, setSourceIndex] = useState(0);
-  const [cdnIndex, setCdnIndex] = useState(1);
+  const [cdnIndex, setCdnIndex] = useState(0);
   const onPickerChange = (e) => {
     const [sourceIndex, cdnIndex] = e.detail.value;
     setSourceIndex(sourceIndex);
@@ -76,11 +76,12 @@ export default () => {
         <Picker
           mode="multiSelector"
           onchange={onPickerChange}
-          // value={pickerValue}
+          // value={pickerValue}0
           range={pickerList}
         >
           <View class="picker">
-            {pickerList[0][sourceIndex]}
+            <View className="picker-title">表情来源&nbsp;/&nbsp;cdn源：</View>
+            {pickerList[0][sourceIndex]}&nbsp;/&nbsp;
             {pickerList[1][cdnIndex]}
           </View>
         </Picker>
