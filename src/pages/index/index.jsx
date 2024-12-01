@@ -11,10 +11,10 @@ import "./index.scss";
 
 const res = Taro.getSystemInfoSync()
 const themeMode = res.theme
-console.log(themeMode, 'themeMode')
+console.log(res, 'res')
 
 export default () => {
-  const [theme, setTheme] = useState(themeMode)
+  const [theme, setTheme] = useState('light')
   const list = [
     {
       pagePath: "/pages/emoji/index",

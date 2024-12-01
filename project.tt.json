@@ -1,6 +1,6 @@
 {
   "miniprogramRoot": "./",
-  "projectname": "awesome-do-what",
+  "projectname": "taro-app",
   "appid": "testAppId",
   "setting": {
     "es6": false,

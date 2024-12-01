@@ -1,7 +1,7 @@
 {
   "miniprogramRoot": "dist/",
-  "projectname": "awesome-do-what",
-  "description": "awesome-do-what-miniapp",
+  "projectname": "taro-app",
+  "description": "awesome-do-what",
   "appid": "wx244cddf1ba7245ad",
   "setting": {
     "urlCheck": true,
@@ -17,7 +17,7 @@
     }
   },
   "compileType": "miniprogram",
-  "libVersion": "3.6.5",
+  "libVersion": "3.6.6",
   "srcMiniprogramRoot": "dist/",
   "packOptions": {
     "ignore": [],
