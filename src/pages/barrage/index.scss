@@ -2,18 +2,36 @@
   background-color: #000;
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
   color: #fff;
   .barrage-container {
-    width: 100%;
-    height: 600px;
-    width: 600px;
-    background-color: antiquewhite;
-    color: red;
+    font-size: 120px;
+    letter-spacing: 2px;
+    writing-mode: vertical-rl;
+    text-orientation: sideways;
+    // writing-mode: vertical-lr;
+    margin: 120px auto 0;
+    // background-color: red;
+    animation: barrge_ani 10s linear infinite;
+  }
+  @keyframes barrge_ani {
+    0% {
+      transform: translateY(100vh);
+    }
+    100% {
+      transform: translateY(-860px);
+    }
+  }
+}
 
-    display: flex;
-    overflow: hidden;
-  }
-  .barrage-demo-wrap {
-    width: 600px;
-  }
+.circle-img-wrap {
+  position: fixed;
+  bottom: 100px;
+  right: 32px;
+
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+  border: 8px solid #fff;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 1);
 }

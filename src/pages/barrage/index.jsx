@@ -1,61 +1,35 @@
-import React, { useRef } from "react";
-import { Cell, Button, Barrage } from "@nutui/nutui-react-taro";
+import { useState } from "react";
+import Taro from "@tarojs/taro";
+import { View } from "@tarojs/components";
+import { Popup, Cell } from "@nutui/nutui-react-taro";
+import "./index.scss";
 
-const Demo1 = () => {
-  const barrageList = [
-    "画美不看画美不看画美不看画美不看",
-    "不明觉厉",
-    "喜大普奔",
-    "男默女泪",
-    "累觉不爱",
-    "爷青结",
-  ];
-  const barrageRef = useRef(null);
-  const addBarrage = () => {
-    const n = Math.random();
-    if (barrageRef.current) {
-      barrageRef.current.add(`随机——${String(n).substr(2, 10)}`);
-    }
-  };
+export default () => {
+  const [popupVisible, setPopupVisible] = useState(false);
+  // const barrageList = ["画美不看画美不看画美不看画美不看"];
   return (
-    <>
-      <Cell className="barrage-demo-wrap">
-        <Barrage
-          className="barrage-demo"
-          interval={100}
-          ref={barrageRef}
-          list={barrageList}
+    <View className="barrage-page">
+      <View className="barrage-container">欢迎郭老师来日</View>
+      <View
+        className="circle-img-wrap"
+        onClick={() => setPopupVisible(true)}
+      ></View>
+      <Popup
+        visible={popupVisible}
+        position="bottom"
+        onClose={() => {
+          setPopupVisible(false);
+        }}
+        lockScroll
+      >
+        <Cell
+          title="标题"
+          value="内容"
+          onClick={() => {
+            setPopupVisible(false);
+          }}
         />
-      </Cell>
-      <Button type="primary" onClick={addBarrage}>
-        随机添加
-      </Button>
-    </>
+      </Popup>
+    </View>
   );
 };
-
-export default Demo1;
-
-// import { useRef } from 'react'
-// import { View } from "@tarojs/components";
-// import { Cell, Button, Barrage } from "@nutui/nutui-react-taro";
-// import '@nutui/nutui-react-taro/dist/style.css'
-// import "./index.scss";
-// import React from "react";
-
-// export default () => {
-//   const barrageList = ["画美不看画美不看画美不看画美不看"];
-//   const barrageRef = useRef(null)
-//   return (
-//     <View className="barrage-page">
-//       <View className="barrage-container">
-//         <Barrage
-//           className="barrage-demo"
-//           interval={1000}
-//           ref={barrageRef}
-//           list={barrageList}
-//         />
-//       </View>
-//     </View>
-//   );
-// };
