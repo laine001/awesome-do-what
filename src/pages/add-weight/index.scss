@@ -1,0 +1,33 @@
+.add-weight-page {
+  background-color: #f4f5f6;
+  min-height: 100vh;
+  padding: 30px;
+
+  .weight-form {
+    border-radius: 12px;
+    background-color: #f4f5f6;
+
+    .at-input {
+      background-color: #fff;
+      margin-bottom: 24px;
+      margin-left: 0;
+      padding: 28px 20px;
+      border: none;
+      border-radius: 18px;
+
+      &::after {
+        border: none;
+      }
+
+      .at-input__title {
+        width: auto;
+      }
+    }
+
+    .at-button {
+      border-radius: 20px;
+      border-color: #fff;
+      background-color: #fff;
+    }
+  }
+}

@@ -5,6 +5,7 @@ export default defineAppConfig({
     'pages/index/index',
     'pages/weight/index',
     'pages/barrage/index',
+    'pages/add-weight/index',
     'pages/emoji/index'
   ],
   window: {

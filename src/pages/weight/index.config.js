@@ -1,5 +1,7 @@
 export default definePageConfig({
   navigationBarTitleText: '记体重',
   usingComponents: {},
-  navigationStyle: 'custom'
+  pageOrientation: 'auto', // auto | portrait | landscape 屏幕旋转方向默认值：portrait
+  navigationStyle: 'custom',
 })
+
